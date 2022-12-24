@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Telangana Association of a Greater San Antonio</title>
+        <link rel="icon" type="image/x-icon" href="tagsa_logo.jpg">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <img src="banner3.jpg">
+        </div>
+
+        <!--mainHeader-->
+        <header>
+            <ul class="navbar">
+                <li><button>Home</button></li> 
+                <li>
+                    <div class="dropdown1">
+                        <button class="dropbtn1">About Us</button>
+                        <div class="dropdown1-content">
+                            <a href="#">Purpose and Objectives</a>
+                            <a href="#">By Laws</a>
+                            <a href="#">Membership</a>
+                        </div> 
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown2">
+                        <button class="dropbtn2">Events</button>
+                        <div class="dropdown2-content">
+                            <a href="#">Current Events</a>
+                            <a href="#">2020-21 Events</a>
+                            <a href="#">2019 Events</a>
+                            <a href="#">2018 Events</a>
+                            <a href="#">2017 Events</a>
+                            <a href="#">2016 Events</a>
+                        </div> 
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown3">
+                        <button class="dropbtn3">Leadership</button>
+                        <div class="dropdown3-content">
+                            <a href="#">Executive Committee</a>
+                            <a href="#">Advisory Committee</a>
+                            <a href="#">Previous EC ▾ </a>
+                        </div> 
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown4">
+                        <button class="dropbtn4">Sponsors</button>
+                        <div class="dropdown4-content">
+                            <a href="#">Donations</a>
+                        </div> 
+                    </div>
+                </li>
+                <li><button>Contact</button></li>
+                <li></li>
+            </ul>
+            <button class="mem">Become a Member</button>
+            
+        </header>
+
+        <!--Photo Gallery-->
+        <section class="photos" id="photos">
+            <h1 style="text-align: center;">Photo Gallery</h1>
+            <div class="photoRow">
+                <div class="photoColumn">
+                    <img src="photo1.JPG" style="width: 100%;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="photoColumn">
+                    <img src="photo2.jpeg" style="width: 100%;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="photoColumn">
+                    <img src="photo3.JPG" style="width: 100%;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="photoColumn">
+                    <img src="photo4.JPG" style="width: 100%;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="photoColumn">
+                    <img src="photo5.jpg" style="width: 100%;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+            </div>
+            <div class="modal" id="myModal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <div class="numberText">1 / 5</div>
+                        <img src="photo1.JPG" style="width: 100%;">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numberText">2 / 5</div>
+                        <img src="photo2.jpeg" style="width: 100%;">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numberText">3 / 5</div>
+                        <img src="photo3.JPG" style="width: 100%;">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numberText">4 / 5</div>
+                        <img src="photo4.JPG" style="width: 100%;">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numberText">5 / 5</div>
+                        <img src="photo5.jpg" style="width: 100%;">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                    <div class="photoColumn">
+                        <img class="demo cursor" src="photo1.JPG" style="width: 100%;" onclick="currentSlide(1)">
+                    </div>
+                    <div class="photoColumn">
+                        <img class="demo cursor" src="photo2.jpeg" style="width: 100%;" onclick="currentSlide(2)">
+                    </div>
+                    <div class="photoColumn">
+                        <img class="demo cursor" src="photo3.JPG" style="width: 100%;" onclick="currentSlide(3)">
+                    </div>
+                    <div class="photoColumn">
+                        <img class="demo cursor" src="photo4.JPG" style="width: 100%;" onclick="currentSlide(4)">
+                    </div>
+                    <div class="photoColumn">
+                        <img class="demo cursor" src="photo5.jpg" style="width: 100%;" onclick="currentSlide(5)">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Contact-->
+        <section class="contact" id="contact">
+            <h1>Contact Us</h1>
+            <div class="contactMenu">
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th><div class="icon"><i class='bx bx-map'></i></div></th>
+                            <th>
+                                <div class="contactText">
+                                    <h5>TAGSA</h5>
+                                    <h4>22931 Cardigan Chase, San Antonio, TX, 78260</h4>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th><div class="icon"><i class='bx bx-phone'></i></div></th>
+                            <th>
+                                <div class="contactText">
+                                    <h5>Need Help? Call US!</h5>
+                                    <h2>210-288-3485</h2>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th><div class="icon"><i class='bx bxl-gmail'></i></div></th>
+                            <th>
+                                <div class="contactText">
+                                    <h5>Need Online Support?</h4>
+                                    <h2>secretary@tagsa.org</h3>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th><div class="icon"><i class='bx bxl-facebook'></i></div></th>
+                            <th>
+                                <div class="contactText">
+                                    <h5>Follow Us on Facebook</h5>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th><div class="icon"><i class='bx bxl-youtube'></i></div></th>
+                            <th>
+                                <div class="contactText">
+                                    <h5>Subscribe to our YouTube Channel</h5>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <table>
+                        <tr>
+                            <th><div class="icon"><i class='bx bxl-whatsapp'></i></div></th>
+                            <th>
+                                <div class="contactText">
+                                    <h5>Chat with us on WhatsApp</h5>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+
+    </body>
+</html>

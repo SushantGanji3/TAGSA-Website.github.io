@@ -1,0 +1,309 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --background-color: #FFCF00;
+    --main-color: #A31600;
+    --test-color: black;
+    --color1: #138808;
+    --color2: #fffaa2;
+    --color3: #FFDF00;
+    --color4: #F5BD1F;
+    --color5: #E30022;
+    --h1-font: 5.2rem;
+	--h2-font: 3.5rem;
+	--p-font: 1.1rem;
+}
+
+body {
+    background-color: var(--main-color);
+    margin: 0px;
+}
+
+.header {
+    padding: 0px;
+}
+
+.header img{
+    width: 100%;
+}
+
+header {
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--main-color);
+	padding: 10px 15%;
+	border-bottom: 1px solid transparent;
+    border: none;
+	transition: all .40s ease;
+}
+
+.mem {
+    background-color: var(--background-color);
+    color: var(--main-color);
+    border: 1px var(--main-color) solid;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: var(--p-font);
+    border-radius: 12px;
+    transition: all .40s ease;
+}
+
+.mem:hover {
+    border: 1px var(--background-color) solid;
+    transform: scale(1.01) translateY(-5px);
+    background: transparent;
+    color: var(--test-color);
+    
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar button:not(.mem) {
+    color: var(--background-color);
+	font-size: var(--p-font);
+    border: none;
+    background: transparent;
+	font-weight: 600;
+	padding: 15px 15px;
+	margin: 0px 2px;
+	transition: all .40s ease;
+}
+
+.navbar button:hover:not(.mem) {
+    background-color: var(--background-color);
+    color: var(--main-color);
+}
+
+
+.dropdown1, .dropdown2, .dropdown3, .dropdown4 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown1-content, .dropdown2-content, .dropdown3-content, .dropdown4-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+   
+}
+
+.dropdown1-content a, .dropdown2-content a, .dropdown3-content a, .dropdown4-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all .40s ease;
+}
+
+.dropdown1:hover .dropdown1-content {display: block;}
+.dropdown2:hover .dropdown2-content {display: block;}
+.dropdown3:hover .dropdown3-content {display: block;}
+.dropdown4:hover .dropdown4-content {display: block;}
+
+.dropdown1-content a:hover {background-color: var(--background-color);}
+.dropdown2-content a:hover {background-color: var(--background-color);}
+.dropdown3-content a:hover {background-color: var(--background-color);}
+.dropdown4-content a:hover {background-color: var(--background-color);}
+
+.dropdown1:hover .dropbtn1 {background-color: var(--background-color); color: var(--main-color);} 
+.dropdown2:hover .dropbtn2 {background-color: var(--background-color); color: var(--main-color);}
+.dropdown3:hover .dropbtn3 {background-color: var(--background-color); color: var(--main-color);}
+.dropdown4:hover .dropbtn4 {background-color: var(--background-color); color: var(--main-color);}
+
+
+
+.contact {
+    width: 75%;
+    margin-left: 12.5%;
+    text-align: center;
+}
+
+
+
+.contactMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .contactMenu {
+        flex-direction: column;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+
+.contactText h5 {
+    color: var(--main-color);
+}
+
+
+.row {
+    background: var(--color4);
+    transition: all .40s ease;
+    margin: 25px 0px;
+    width: 300px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row:hover {
+    transform: scale(1.01) translateY(-5px);
+    cursor: pointer;
+}
+
+.icon i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: var(--main-color);;
+}
+
+.photos {
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+.photoRow {
+    margin-top: 25px;
+}
+
+.photos img {
+    border: 5px var(--background-color) solid;
+}
+
+.photoRow > .photoColumn {
+    padding: 0px 8px;
+}
+.photoRow::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.photoColumn {
+    float: left;
+    width: 20%;
+}
+/*Modal Background*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+/*Modal Content*/
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+.mySlides {
+    display: none;
+}
+.cursor {
+    cursor: pointer;
+}
+/*Previous and Next buttons*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.numberText {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.img {
+    margin-bottom: -4px;
+}
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+.demo {
+    opacity: 0.6;
+}
+.active, .demo:hover {
+    opacity: 1;
+}
+img.hover-shadow {
+    transition: all 0.3s ease;
+}
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
