@@ -119,6 +119,8 @@ header {
 .dropdown3:hover .dropdown3-content {display: block;}
 .dropdown4:hover .dropdown4-content {display: block;}
 
+.dropbtn1 a:hover {color: var(--main-color);}
+
 .dropdown1-content a:hover {background-color: var(--background-color);}
 .dropdown2-content a:hover {background-color: var(--background-color);}
 .dropdown3-content a:hover {background-color: var(--background-color);}
@@ -129,7 +131,79 @@ header {
 .dropdown3:hover .dropbtn3 {background-color: var(--background-color); color: var(--main-color);}
 .dropdown4:hover .dropbtn4 {background-color: var(--background-color); color: var(--main-color);}
 
+.body-background {
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    background-color: var(--color2);
+    color: var(--main-color);
+    margin-bottom: 50px;
+}
 
+.maintab {
+    text-align: center;
+    width: 100%;
+    border: solid 1px black;
+}
+.maintab th{
+    border: solid 1px black;
+    width:50%;
+}
+
+.about{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 2rem;
+}
+
+.about-text p{
+	color: var(--second-color);
+	
+	line-height: 30px;
+	margin-bottom: 2rem;
+}
+
+.about-img img{
+	height: auto;
+	width: 100%;
+	max-width: 460px;
+}
+
+.vertical-menu {
+    width: 80%; /* Set a width if you like */
+    margin-left: 10%;
+    height: 150px;
+    overflow-y: auto;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu a.active {
+    background-color: #04AA6D; /* Add a green color to the "active/current" link */
+    color: white;
+  }
+
+.infobox {
+    padding: 10px;
+    margin-left: 5%;
+    width: 90%;
+}
+.info {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
 
 .contact {
     width: 75%;
@@ -184,12 +258,14 @@ header {
     justify-content: center;
     width: 50px;
     height: 50px;
-    color: var(--main-color);;
+    color: var(--main-color);
 }
 
 .photos {
     width: 75%;
     margin-left: 12.5%;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .photoRow {
@@ -306,4 +382,19 @@ img.hover-shadow {
 }
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.bullet {
+    width: 80%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.bullet li{
+    list-style-type: disc;
+}
+
+b {
+    text-decoration: underline;
 }
